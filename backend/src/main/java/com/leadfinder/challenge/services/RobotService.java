@@ -11,12 +11,12 @@ public class RobotService implements IRobotService {
     public String handleCoords(String command) {
         char[] commands = command.toCharArray();
         for(int i=0;i<commands.length;i++) {
-            if(Character.compare(commands[i], 'M') == 0) {move();}
-            else if(Character.compare(commands[i], 'L') == 0) {turnLeft();}
-            else if(Character.compare(commands[i], 'R') == 0) {turnRight();}
+            if(Character.compare(commands[i], 'M') == 0 || Character.compare(commands[i], 'm') == 0) {move();}
+            else if(Character.compare(commands[i], 'L') == 0 || Character.compare(commands[i], 'l') == 0) {turnLeft();}
+            else if(Character.compare(commands[i], 'R') == 0 || Character.compare(commands[i], 'r') == 0) {turnRight();}
         }
-        if(x < 0 || x > 5) { throw new Error("Bad request");}
-        if(y < 0 || y > 5) { throw new Error("Bad request");}
+        if(x < 0 || x > 4) { throw new Error();}
+        if(y < 0 || y > 4) { throw new Error();}
 
         return "("+ x + "," + y + "," + direction + ")" ;
     }
@@ -86,9 +86,9 @@ public class RobotService implements IRobotService {
         boolean isValid = true;
         char[] commands = command.toCharArray();
         for(int i = 0; i< commands.length; i++) {
-            if(Character.compare(commands[i], 'M') == 0) {}
-            else if(Character.compare(commands[i], 'L') == 0) {}
-            else if(Character.compare(commands[i], 'R') == 0) {}
+            if(Character.compare(commands[i], 'M') == 0 || Character.compare(commands[i], 'm') == 0) {}
+            else if(Character.compare(commands[i], 'L') == 0 || Character.compare(commands[i], 'l') == 0) {}
+            else if(Character.compare(commands[i], 'R') == 0 || Character.compare(commands[i], 'r') == 0) {}
             else{
                 isValid = false;
                 break;
