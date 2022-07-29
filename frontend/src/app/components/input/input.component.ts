@@ -19,9 +19,14 @@ export class InputComponent implements OnInit {
     this.inputService.getAll(this.input).subscribe(
       (coordinates) => {
         this.coordinates = coordinates;
-        this.error = '';
+        (this.inputService.coords.x = this.coordinates[1]),
+          (this.inputService.coords.y = this.coordinates[3]),
+          (this.inputService.coords.direction = this.coordinates[5]),
+          (this.error = '');
       },
-      (err) => (this.error = err.error)
+      (err) => {
+        this.error = err.error;
+      }
     );
   }
 }

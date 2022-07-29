@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { TerrainComponent } from './components/terrain/terrain.component';
+import { RobotComponent } from './components/robot/robot.component';
 
 @NgModule({
-  declarations: [AppComponent, InputComponent, TerrainComponent],
+  declarations: [AppComponent, InputComponent, TerrainComponent, RobotComponent],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

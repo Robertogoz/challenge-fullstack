@@ -1,0 +1,32 @@
+.robot {
+  height: 50px;
+  width: 50px;
+  margin: 10px 20px 0px;
+}
+
+.arrow-up {
+  height: 30px;
+  width: 30px;
+  margin: 0 30px;
+  transform: rotate(-90deg);
+}
+
+.arrow-down {
+  height: 30px;
+  width: 30px;
+  margin: 0 30px;
+  transform: rotate(90deg);
+}
+
+.arrow-right {
+  height: 30px;
+  width: 30px;
+  margin: 0 30px;
+}
+
+.arrow-left {
+  height: 30px;
+  width: 30px;
+  margin: 0 30px;
+  transform: rotate(180deg);
+}

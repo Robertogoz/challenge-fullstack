@@ -1,0 +1,11 @@
+<div id="robot" [ngSwitch]="this.robotCoords?.direction">
+  <img class="robot" src="../../../assets/robot.png" />
+  <img *ngSwitchCase="'N'" class="arrow-up" src="../../../assets/arrow.png" />
+  <img *ngSwitchCase="'S'" class="arrow-down" src="../../../assets/arrow.png" />
+  <img
+    *ngSwitchCase="'E'"
+    class="arrow-right"
+    src="../../../assets/arrow.png"
+  />
+  <img *ngSwitchCase="'W'" class="arrow-left" src="../../../assets/arrow.png" />
+</div>

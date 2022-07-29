@@ -2,8 +2,13 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { empty, Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
+export type Coords = {
+  x: string;
+  y: string;
+  direction: string;
+};
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +17,11 @@ export class InputService {
   private apiUrl: string = 'http://localhost:8080/rest/mars';
 
   constructor(private http: HttpClient) {}
+  coords: Coords = {
+    x: '0',
+    y: '0',
+    direction: 'N',
+  };
 
   getAll(inputData: string): Observable<string> {
     return this.http.post(
